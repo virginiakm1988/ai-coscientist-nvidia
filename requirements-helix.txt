@@ -1,0 +1,1 @@
+nhx-evals-sdk @ git+https://github.com/NVIDIA-NeMo/nemo-helix.git@6386f9f0a84e8c4b71c4852fec9d7fae1aaf6b11#subdirectory=packages/nhx_evals_sdk

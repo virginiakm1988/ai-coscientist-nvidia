@@ -1,0 +1,412 @@
+{
+  "command": "demo",
+  "mode": "live",
+  "status": "succeeded",
+  "config": {
+    "project": "ai-coscientist",
+    "data": "../data/scenarios.json",
+    "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+    "base_url": "https://integrate.api.nvidia.com/v1",
+    "max_requests": 12
+  },
+  "config_sha256": "45a5bdeec8621309065e81548b9212f183587eee37aec3e4742e7d8199d06a8e",
+  "started_at": "2026-11-16T09:08:10.197476+00:00",
+  "python": "3.12.14",
+  "result": {
+    "agent_name": "ai-coscientist",
+    "harness": "virginia.demo.ai-coscientist",
+    "adapter_kind": "python",
+    "adapter_id": "virginia.demo.ai-coscientist",
+    "runtime_id": "runtime-1794820090900-20180-2",
+    "invocation_id": "invocation-1794820091302-20180-5",
+    "request_id": "request-ebd7a9a708624d898766258fe4f81c78",
+    "status": "succeeded",
+    "output": {
+      "method": "deterministic evidence chain plus NIM explanation",
+      "metrics": {
+        "claim_decision_accuracy": 1.0,
+        "n": 4,
+        "narrative_quality": "requires_human_review",
+        "numeric_checks_are_deterministic": true
+      },
+      "scenarios": [
+        {
+          "answer": {
+            "citations": [
+              "baseline",
+              "candidate"
+            ],
+            "model_called": true,
+            "status": "supported",
+            "summary": "The candidate improves accuracy by 11 percentage points, rising from 80% to 91% on the demo-heldout-v1 evaluation set."
+          },
+          "check": {
+            "citations": [
+              "baseline",
+              "candidate"
+            ],
+            "evidence_chain": [
+              {
+                "artifact": {
+                  "correct": 80,
+                  "evaluation_set_sha256": "demo-heldout-v1",
+                  "total": 100
+                },
+                "id": "baseline",
+                "sha256": "de39652793ed784b9a6f3a0c2ef24e90a6e23cc7b27acf752c4c11e83f79076d"
+              },
+              {
+                "artifact": {
+                  "correct": 91,
+                  "evaluation_set_sha256": "demo-heldout-v1",
+                  "total": 100
+                },
+                "id": "candidate",
+                "sha256": "47e7e331d8e6ca7788b41b915c301126ae8d591ddd2f678ed30902cd97c6c173"
+              }
+            ],
+            "reason": "Computed (candidate correct/total - baseline correct/total) × 100.",
+            "status": "supported",
+            "value": 11.0
+          },
+          "expected_status": "supported",
+          "id": "matching-results"
+        },
+        {
+          "answer": {
+            "citations": [],
+            "model_called": true,
+            "status": "unsupported",
+            "summary": "The claim that the candidate improves accuracy by 11 percentage points is unsupported. The verified result indicates missing required evidence, specifically the candidate's data, and the citations provided ('baseline', 'candidate') do not identify the claimed comparison."
+          },
+          "check": {
+            "citations": [],
+            "evidence_chain": [],
+            "missing": [
+              "candidate"
+            ],
+            "reason": "Missing required evidence or citations do not identify the claimed comparison.",
+            "status": "unsupported",
+            "value": null
+          },
+          "expected_status": "unsupported",
+          "id": "missing-evidence"
+        },
+        {
+          "answer": {
+            "citations": [],
+            "model_called": true,
+            "status": "unsupported",
+            "summary": "The claim that the candidate improves accuracy by 11 percentage points is unsupported. The verified result indicates missing required evidence or citations that do not identify the claimed comparison."
+          },
+          "check": {
+            "citations": [],
+            "evidence_chain": [],
+            "missing": [],
+            "reason": "Missing required evidence or citations do not identify the claimed comparison.",
+            "status": "unsupported",
+            "value": null
+          },
+          "expected_status": "unsupported",
+          "id": "wrong-citation"
+        },
+        {
+          "answer": {
+            "citations": [
+              "baseline",
+              "candidate"
+            ],
+            "model_called": true,
+            "status": "refuted",
+            "summary": "The candidate improves accuracy by 11 percentage points, which does not meet the claimed value of 25 percentage points. The computed gain is 11.0 pp based on the provided artifacts."
+          },
+          "check": {
+            "citations": [
+              "baseline",
+              "candidate"
+            ],
+            "evidence_chain": [
+              {
+                "artifact": {
+                  "correct": 80,
+                  "evaluation_set_sha256": "demo-heldout-v1",
+                  "total": 100
+                },
+                "id": "baseline",
+                "sha256": "de39652793ed784b9a6f3a0c2ef24e90a6e23cc7b27acf752c4c11e83f79076d"
+              },
+              {
+                "artifact": {
+                  "correct": 91,
+                  "evaluation_set_sha256": "demo-heldout-v1",
+                  "total": 100
+                },
+                "id": "candidate",
+                "sha256": "47e7e331d8e6ca7788b41b915c301126ae8d591ddd2f678ed30902cd97c6c173"
+              }
+            ],
+            "reason": "Computed (candidate correct/total - baseline correct/total) × 100.",
+            "status": "refuted",
+            "value": 11.0
+          },
+          "expected_status": "refuted",
+          "id": "wrong-number"
+        }
+      ],
+      "scope": "Companion implementation of EOP concepts; not an autonomous scientific discovery benchmark."
+    },
+    "execution": {
+      "software_environments": [
+        {
+          "context_ref": "env-0",
+          "participants": [
+            "caller_sdk"
+          ],
+          "status": "available",
+          "complete": true,
+          "entries": [
+            {
+              "role": "interpreter",
+              "kind": "executable",
+              "name": "python",
+              "version": {
+                "status": "available",
+                "source": "caller_sdk:sys.version",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:10.710Z",
+                "value": "3.12.14"
+              }
+            },
+            {
+              "role": "fabric_sdk",
+              "kind": "python_distribution",
+              "name": "nemo-fabric-runtime",
+              "version": {
+                "status": "available",
+                "source": "caller_sdk:importlib.metadata",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:10.710Z",
+                "value": "0.6.1"
+              }
+            },
+            {
+              "role": "contract",
+              "kind": "python_distribution",
+              "name": "nemo-fabric-evidence",
+              "version": {
+                "status": "available",
+                "source": "caller_sdk:importlib.metadata",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:10.710Z",
+                "value": "0.6.1"
+              }
+            }
+          ]
+        },
+        {
+          "context_ref": "env-1",
+          "participants": [
+            "core"
+          ],
+          "status": "available",
+          "complete": true,
+          "entries": [
+            {
+              "role": "fabric_core",
+              "kind": "component",
+              "name": "nemo-fabric-core",
+              "version": {
+                "status": "available",
+                "source": "core:version",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:10.967Z",
+                "value": "0.6.1"
+              }
+            }
+          ]
+        },
+        {
+          "context_ref": "env-2",
+          "participants": [
+            "adapter"
+          ],
+          "status": "available",
+          "complete": true,
+          "entries": [
+            {
+              "role": "interpreter",
+              "kind": "executable",
+              "name": "python",
+              "version": {
+                "status": "available",
+                "source": "adapter:sys.version",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:11.294Z",
+                "value": "3.12.14"
+              }
+            },
+            {
+              "role": "contract",
+              "kind": "python_distribution",
+              "name": "nemo-fabric-adapter-contract",
+              "version": {
+                "status": "available",
+                "source": "adapter:importlib.metadata",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:11.294Z",
+                "value": "0.6.1"
+              }
+            },
+            {
+              "role": "contract",
+              "kind": "python_distribution",
+              "name": "nemo-fabric-evidence",
+              "version": {
+                "status": "available",
+                "source": "adapter:importlib.metadata",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:11.294Z",
+                "value": "0.6.1"
+              }
+            },
+            {
+              "role": "shared_library",
+              "kind": "python_distribution",
+              "name": "nemo-fabric-adapters-common",
+              "version": {
+                "status": "available",
+                "source": "adapter:importlib.metadata",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:11.294Z",
+                "value": "0.6.1"
+              }
+            },
+            {
+              "role": "adapter",
+              "kind": "component",
+              "name": "__main__",
+              "version": {
+                "status": "unavailable",
+                "source": "adapter:startup",
+                "origin": "observed",
+                "observed_at": "2026-11-16T09:08:11.300Z",
+                "reason": "no_selected_package_report"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "system_stats": {
+      "collected_groups": [
+        "process",
+        "cgroup.cpu",
+        "cgroup.memory",
+        "cgroup.pressure"
+      ],
+      "elapsed_seconds": 12.9005538,
+      "before": {
+        "status": "unsupported",
+        "reason": "no process reader for operating system `windows`"
+      },
+      "after": {
+        "status": "unsupported",
+        "reason": "no process reader for operating system `windows`"
+      },
+      "cgroup": {
+        "before": {
+          "status": "unsupported",
+          "reason": "native cgroup v2 reader requires local Linux execution"
+        },
+        "after": {
+          "status": "unsupported",
+          "reason": "native cgroup v2 reader requires local Linux execution"
+        },
+        "cpu_usage_microseconds": {
+          "status": "unsupported",
+          "reason": "native cgroup v2 reader requires local Linux execution"
+        },
+        "cpu_throttled_microseconds": {
+          "status": "unsupported",
+          "reason": "native cgroup v2 reader requires local Linux execution"
+        },
+        "oom_kills": {
+          "status": "unsupported",
+          "reason": "native cgroup v2 reader requires local Linux execution"
+        }
+      },
+      "sampled": null
+    },
+    "artifacts": {
+      "root": null,
+      "artifacts": []
+    },
+    "events": [
+      {
+        "event_id": "event-1794820104205-20180-6",
+        "timestamp_millis": 1794820104205,
+        "kind": "runtime_start",
+        "message": "started runtime runtime-1794820090900-20180-2",
+        "metadata": {
+          "environment_id": "environment-1794820090899-20180-1",
+          "environment_provider": "local",
+          "host_pid": 40460,
+          "runtime_id": "runtime-1794820090900-20180-2"
+        }
+      },
+      {
+        "event_id": "event-1794820104205-20180-7",
+        "timestamp_millis": 1794820104205,
+        "kind": "invocation_start",
+        "message": "invoking persistent local host for virginia.demo.ai-coscientist",
+        "metadata": {
+          "invocation_id": "invocation-1794820091302-20180-5",
+          "runtime_id": "runtime-1794820090900-20180-2"
+        }
+      },
+      {
+        "event_id": "event-1794820104205-20180-8",
+        "timestamp_millis": 1794820104205,
+        "kind": "invocation_end",
+        "message": "persistent local host completed with status Succeeded",
+        "metadata": {
+          "invocation_id": "invocation-1794820091302-20180-5",
+          "runtime_id": "runtime-1794820090900-20180-2"
+        }
+      },
+      {
+        "event_id": "event-1794820104295-20180-9",
+        "timestamp_millis": 1794820104295,
+        "kind": "runtime_stop",
+        "message": "stopped runtime runtime-1794820090900-20180-2",
+        "metadata": {
+          "already_stopped": false,
+          "host_crashed": false,
+          "runtime_id": "runtime-1794820090900-20180-2"
+        }
+      }
+    ],
+    "metadata": {
+      "adapter_runner": "persistent_local_host",
+      "environment_provider": "local",
+      "fabric_home": "[local-user]\\AppData\\Local\\Temp\\nemo-fabric\\.fabric\\runtime-1794820090900-20180-2\\invocation-1794820091302-20180-5",
+      "fabric_invocation": "[local-user]\\AppData\\Local\\Temp\\nemo-fabric\\.fabric\\runtime-1794820090900-20180-2\\invocation-1794820091302-20180-5\\adapter-invocation.json",
+      "host_command": "[workspace]\\work\\agent-finance-venv\\Scripts\\python.exe -m project_demo.fabric_runtime",
+      "host_pid": 40460
+    },
+    "error": null,
+    "usage": null,
+    "resource_snapshot": null,
+    "telemetry": [],
+    "sdk_versions": {
+      "nemo-fabric": "0.6.1",
+      "nemo-fabric-adapter-contract": "0.6.1",
+      "nemo-relay": "0.11.1",
+      "data-designer": "0.10.0",
+      "nemo-automodel": null,
+      "transformers": null,
+      "torch": null
+    }
+  },
+  "elapsed_seconds": 14.14
+}

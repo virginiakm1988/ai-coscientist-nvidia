@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ai-coscientist-nvidia"
+version = "0.1.0"
+description = "Reproducible NVIDIA SDK companion tutorial: ai-coscientist-nvidia"
+requires-python = ">=3.11"
+license = "Apache-2.0"
+dependencies = []
+
+[project.optional-dependencies]
+agents = ["nemo-fabric==0.6.1", "nemo-fabric-adapters-common==0.6.1", "nemo-relay==0.11.1"]
+data = ["data-designer==0.10.0"]
+
+notebook = ["ipywidgets==8.1.7", "nbformat==5.10.4", "matplotlib>=3.9"]
+
+[project.scripts]
+ai-coscientist-nvidia = "project_demo.__main__:main"
+
+[tool.setuptools.packages.find]
+include = ["project_demo*"]
+
+[tool.setuptools.package-data]
+project_demo = ["adapters/*.json"]

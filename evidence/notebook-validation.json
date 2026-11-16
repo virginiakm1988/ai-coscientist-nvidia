@@ -1,0 +1,12 @@
+[
+  {
+    "notebook": "ai-coscientist-nvidia/01_interactive_demo.ipynb",
+    "status": "passed",
+    "executed_code_cells": 6
+  },
+  {
+    "notebook": "ai-coscientist-nvidia/02_evaluation.ipynb",
+    "status": "passed",
+    "executed_code_cells": 4
+  }
+]

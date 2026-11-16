@@ -1,0 +1,20 @@
+{
+  "reviewer_role": "independent implementation agent",
+  "rounds": 2,
+  "unit_tests_passed": 9,
+  "unresolved_reported_code_findings": 0,
+  "execution_scope": "Offline tests and source/notebook review. Real SDK/GPU execution evidence is reported separately.",
+  "reviewed_source_sha256": {
+    "project_demo/common.py": "d4b186d1c46702ea1e185a6c2593aa030422eced1b0aeb6bc5e45a83c7ad7e36",
+    "project_demo/fabric_consumer.py": "3cf21eb23805d98955f752ae1f85333cdf6f7d27057f67b61e5b033e4f181932",
+    "project_demo/fabric_runtime.py": "bc19969a2f7c38149679023ce0fd8b3736b0fb8a5044dd2f2e8f29d3b815abc2",
+    "project_demo/helix_evaluate.py": "9349a4fca4d32904415794821f52b33bbba49c489b0c385998aa925345f08f41",
+    "project_demo/nim_client.py": "51d88b706542bb6bd33f08feec9f3003f5a33d8538bd382cba6c367b7b4b7a31",
+    "project_demo/telemetry.py": "894c1eebb6289cb5d504b8c96c5d3d8b524219179771d3edcbeb7da20c7e3a67",
+    "project_demo/workflow.py": "ccb652be3b36c6f2e73654d1d228270506820bd22b322ca83ee1b4130a4a3829",
+    "project_demo/__init__.py": "41362a5ea4931c546433d4c48290c5707bf02dbbea1c3aafa9f43d1225e47003",
+    "project_demo/__main__.py": "6d6fbe321bf7be75d954c6bbcf6c32182295e6439a23cb2d5b63010910df2308",
+    "tests/test_execution.py": "79ac7ff31426ae80544a0f19c0bcdd8e1c2071a3fd2fc2ecd21294642fdf195f",
+    "tests/test_workflow.py": "1883a213473da1b55373bf31e6d06a78c194a26721d18303bc79efd87505b098"
+  }
+}

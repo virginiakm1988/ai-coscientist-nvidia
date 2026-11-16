@@ -1,0 +1,22 @@
+{
+  "contract_version": "fabric.adapter/v1alpha2",
+  "adapter_id": "virginia.demo.ai-coscientist",
+  "adapter_kind": "python",
+  "runner": {
+    "module": "project_demo.fabric_runtime"
+  },
+  "settings_schema": {
+    "type": "object",
+    "additionalProperties": false
+  },
+  "requirements": {},
+  "config": {
+    "accepts": []
+  },
+  "capabilities": {
+    "cancellation": false,
+    "service": false,
+    "streaming": false,
+    "updates": false
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "duration_sec": 0.0,
+  "finished_at": "2026-11-16T09:18:08.054780Z",
+  "labels": {
+    "project": "ai-coscientist",
+    "source_mode": "fixture"
+  },
+  "sdk_version": "0.0.0",
+  "started_at": "2026-11-16T09:18:08.054780Z",
+  "target": {
+    "config": {},
+    "kind": "imported",
+    "name": "imported",
+    "version": null
+  }
+}

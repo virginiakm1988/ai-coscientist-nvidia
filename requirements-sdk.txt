@@ -1,0 +1,4 @@
+nemo-fabric==0.6.1
+nemo-fabric-adapters-common==0.6.1
+nemo-relay==0.11.1
+data-designer==0.10.0

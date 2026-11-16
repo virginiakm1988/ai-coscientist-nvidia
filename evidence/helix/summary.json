@@ -1,0 +1,183 @@
+{
+  "error_count": 0,
+  "error_trial_ids": {},
+  "metric_coverage": {
+    "project_structured_checks": {
+      "decision_correct": {
+        "failed": 0,
+        "missing": 0,
+        "scored": 4,
+        "total": 4
+      },
+      "report_matches_check": {
+        "failed": 0,
+        "missing": 0,
+        "scored": 4,
+        "total": 4
+      }
+    }
+  },
+  "score_count": 4,
+  "scores": {
+    "scores": [
+      {
+        "count": 0,
+        "histogram": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "name": "project_structured_checks.decision_correct",
+        "nan_count": 4,
+        "percentiles": null,
+        "sample_std_dev": null,
+        "sample_variance": null,
+        "score_type": "range",
+        "std_dev": null,
+        "sum": null,
+        "variance": null
+      },
+      {
+        "count": 0,
+        "histogram": null,
+        "max": null,
+        "mean": null,
+        "median": null,
+        "min": null,
+        "name": "project_structured_checks.report_matches_check",
+        "nan_count": 4,
+        "percentiles": null,
+        "sample_std_dev": null,
+        "sample_variance": null,
+        "score_type": "range",
+        "std_dev": null,
+        "sum": null,
+        "variance": null
+      },
+      {
+        "count": 4,
+        "histogram": null,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "name": "project_structured_checks.decision_correct.pass@1",
+        "nan_count": 0,
+        "percentiles": {
+          "p10": 1.0,
+          "p100": 1.0,
+          "p20": 1.0,
+          "p30": 1.0,
+          "p40": 1.0,
+          "p50": 1.0,
+          "p60": 1.0,
+          "p70": 1.0,
+          "p80": 1.0,
+          "p90": 1.0
+        },
+        "sample_std_dev": 0.0,
+        "sample_variance": 0.0,
+        "score_type": "range",
+        "std_dev": 0.0,
+        "sum": 4.0,
+        "variance": 0.0
+      },
+      {
+        "count": 4,
+        "histogram": null,
+        "max": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "min": 1.0,
+        "name": "project_structured_checks.report_matches_check.pass@1",
+        "nan_count": 0,
+        "percentiles": {
+          "p10": 1.0,
+          "p100": 1.0,
+          "p20": 1.0,
+          "p30": 1.0,
+          "p40": 1.0,
+          "p50": 1.0,
+          "p60": 1.0,
+          "p70": 1.0,
+          "p80": 1.0,
+          "p90": 1.0
+        },
+        "sample_std_dev": 0.0,
+        "sample_variance": 0.0,
+        "score_type": "range",
+        "std_dev": 0.0,
+        "sum": 4.0,
+        "variance": 0.0
+      }
+    ]
+  },
+  "task_count": 4,
+  "task_metric_values": {
+    "matching-results": {
+      "project_structured_checks.decision_correct": [
+        {
+          "trial_id": "matching-results:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ],
+      "project_structured_checks.report_matches_check": [
+        {
+          "trial_id": "matching-results:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ]
+    },
+    "missing-evidence": {
+      "project_structured_checks.decision_correct": [
+        {
+          "trial_id": "missing-evidence:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ],
+      "project_structured_checks.report_matches_check": [
+        {
+          "trial_id": "missing-evidence:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ]
+    },
+    "wrong-citation": {
+      "project_structured_checks.decision_correct": [
+        {
+          "trial_id": "wrong-citation:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ],
+      "project_structured_checks.report_matches_check": [
+        {
+          "trial_id": "wrong-citation:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ]
+    },
+    "wrong-number": {
+      "project_structured_checks.decision_correct": [
+        {
+          "trial_id": "wrong-number:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ],
+      "project_structured_checks.report_matches_check": [
+        {
+          "trial_id": "wrong-number:captured",
+          "value": true,
+          "value_type": "number"
+        }
+      ]
+    }
+  },
+  "trial_count": 4
+}

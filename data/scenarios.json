@@ -1,0 +1,128 @@
+[
+  {
+    "id": "matching-results",
+    "claim": {
+      "text": "The candidate improves accuracy by 11 percentage points.",
+      "metric": "accuracy_gain_pp",
+      "claimed_value": 11,
+      "required_evidence": [
+        "baseline",
+        "candidate"
+      ],
+      "citations": [
+        "baseline",
+        "candidate"
+      ]
+    },
+    "evidence": {
+      "baseline": {
+        "correct": 80,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "candidate": {
+        "correct": 91,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "unrelated": {
+        "correct": 99,
+        "total": 100,
+        "evaluation_set_sha256": "other-testset"
+      }
+    },
+    "expected_status": "supported"
+  },
+  {
+    "id": "missing-evidence",
+    "claim": {
+      "text": "The candidate improves accuracy by 11 percentage points.",
+      "metric": "accuracy_gain_pp",
+      "claimed_value": 11,
+      "required_evidence": [
+        "baseline",
+        "candidate"
+      ],
+      "citations": [
+        "baseline",
+        "candidate"
+      ]
+    },
+    "evidence": {
+      "baseline": {
+        "correct": 80,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      }
+    },
+    "expected_status": "unsupported"
+  },
+  {
+    "id": "wrong-citation",
+    "claim": {
+      "text": "The candidate improves accuracy by 11 percentage points.",
+      "metric": "accuracy_gain_pp",
+      "claimed_value": 11,
+      "required_evidence": [
+        "baseline",
+        "candidate"
+      ],
+      "citations": [
+        "baseline",
+        "unrelated"
+      ]
+    },
+    "evidence": {
+      "baseline": {
+        "correct": 80,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "candidate": {
+        "correct": 91,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "unrelated": {
+        "correct": 99,
+        "total": 100,
+        "evaluation_set_sha256": "other-testset"
+      }
+    },
+    "expected_status": "unsupported"
+  },
+  {
+    "id": "wrong-number",
+    "claim": {
+      "text": "The candidate improves accuracy by 11 percentage points.",
+      "metric": "accuracy_gain_pp",
+      "claimed_value": 25,
+      "required_evidence": [
+        "baseline",
+        "candidate"
+      ],
+      "citations": [
+        "baseline",
+        "candidate"
+      ]
+    },
+    "evidence": {
+      "baseline": {
+        "correct": 80,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "candidate": {
+        "correct": 91,
+        "total": 100,
+        "evaluation_set_sha256": "demo-heldout-v1"
+      },
+      "unrelated": {
+        "correct": 99,
+        "total": 100,
+        "evaluation_set_sha256": "other-testset"
+      }
+    },
+    "expected_status": "refuted"
+  }
+]

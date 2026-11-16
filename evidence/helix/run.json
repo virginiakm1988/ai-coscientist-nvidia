@@ -1,0 +1,12 @@
+{
+  "artifacts": {
+    "metadata": "metadata.json",
+    "scores": "scores.jsonl",
+    "summary": "summary.json",
+    "tasks": "tasks.jsonl",
+    "trials": "trials.jsonl"
+  },
+  "dashboard_path": "runs\\helix-sdk-validation\\report.html",
+  "output_dir": "runs\\helix-sdk-validation",
+  "run_id": "agent-eval-20261116091808-e0b105e0"
+}

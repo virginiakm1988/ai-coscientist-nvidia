@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-16",
+  "offline_tests": {
+    "status": "passed",
+    "count": 9
+  },
+  "independent_review": "two rounds passed; REVIEW.md",
+  "notebooks": {
+    "status": "passed",
+    "environment": "isolated local Python3.12 kernel",
+    "bootstrap": "local staged checkout; public clone/install pending publication",
+    "outputs": "actual saved cell output; fixture/live explicitly separated"
+  },
+  "publication": "pending_parent_publication",
+  "live_nim": {
+    "status": "passed",
+    "engine": "NeMo Fabric0.6.1 + NeMo Relay0.11.1",
+    "evidence": "evidence/live-nim-fabric.json"
+  },
+  "helix": {
+    "status": "passed",
+    "sdk_source": "6386f9f0a84e8c4b71c4852fec9d7fae1aaf6b11",
+    "scope": "actual captured-trial scoring; no full controlplane deployment"
+  }
+}
